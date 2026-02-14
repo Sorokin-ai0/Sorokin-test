@@ -1,0 +1,12 @@
+{
+  "name": "lemon-67-website",
+  "version": "1.0.0",
+  "description": "Static website for Lemon-67 sports drink company",
+  "main": "index.html",
+  "scripts": {
+    "vercel-build": "echo 'No complex build required for static HTML/CSS. Vercel will serve files directly.'"
+  },
+  "keywords": ["static", "html", "css", "website"],
+  "author": "SorokinCode",
+  "license": "ISC"
+}
