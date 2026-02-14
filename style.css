@@ -1,0 +1,501 @@
+/* General Body & Typography */
+:root {
+    --primary-yellow: #FFD700; /* Gold */
+    --secondary-green: #8BC34A; /* Light Green */
+    --dark-gray: #333333;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--white);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--primary-yellow);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: var(--dark-gray);
+    color: var(--white);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-yellow);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-yellow);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav a {
+    color: var(--white);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary-yellow);
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-yellow);
+    color: var(--dark-gray);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--secondary-green);
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x500/FFD700/333333?text=Lemon-67+Sports+Action') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--white);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--light-gray);
+}
+
+/* About Section */
+.about {
+    background: var(--light-gray);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about .about-grid {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about .about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about .about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about h3 {
+    font-size: 2.2rem;
+    color: var(--primary-yellow);
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about ul li {
+    background: var(--white);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-left: 4px solid var(--secondary-green);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-size: 1.1rem;
+}
+
+/* Products Section */
+.products {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.products h3 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--dark-gray);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-item {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 150px; /* Fixed height for consistency */
+    object-fit: contain; /* Ensures the image fits without cropping */
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.product-item h4 {
+    font-size: 1.5rem;
+    color: var(--primary-yellow);
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Rewards Program Page Specific Styles */
+.rewards-hero {
+    background: linear-gradient(rgba(139, 195, 74, 0.7), rgba(139, 195, 74, 0.7)), url('https://via.placeholder.com/1500x400/8BC34A/FFFFFF?text=Lemon-67+Rewards') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.rewards-hero h2 {
+    font-size: 3rem;
+    color: var(--white);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.rewards-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 20px auto 0;
+    color: var(--light-gray);
+}
+
+.signup-form {
+    padding: 60px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.signup-form h3 {
+    font-size: 2.5rem;
+    color: var(--primary-yellow);
+    margin-bottom: 30px;
+}
+
+.signup-form form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--dark-gray);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.3);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.form-group.checkbox-group label {
+    margin-bottom: 0;
+}
+
+.signup-form .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.benefits {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.benefits h3 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--dark-gray);
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.benefits ul li {
+    background: var(--primary-yellow);
+    color: var(--dark-gray);
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    min-width: 250px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits ul li:hover {
+    background-color: var(--secondary-green);
+    color: var(--white);
+}
+
+
+/* Footer */
+footer {
+    background: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--primary-yellow);
+}
+
+footer a {
+    color: var(--primary-yellow);
+}
+
+footer a:hover {
+    color: var(--secondary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .about .about-grid {
+        flex-direction: column;
+    }
+
+    .about .about-image,
+    .about .about-text {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rewards-hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .signup-form form {
+        padding: 20px;
+    }
+
+    .benefits ul li {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about h3, .products h3, .signup-form h3, .benefits h3 {
+        font-size: 1.8rem;
+    }
+
+    .product-item img {
+        height: 120px;
+    }
+}
